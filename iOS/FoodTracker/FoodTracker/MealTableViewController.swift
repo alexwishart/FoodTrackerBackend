@@ -170,11 +170,11 @@ class MealTableViewController: UITableViewController {
     //MARK: Private Methods
     
     private func loadSampleMeals() {
+        
         print("loading sample meals")
         
         let photo1 = UIImageJPEGRepresentation(UIImage(named: "festiveMeal1")!, 1)
         let photo2 = UIImageJPEGRepresentation(UIImage(named: "festiveMeal2")!, 1)
-        let photo3 = UIImageJPEGRepresentation(UIImage(named: "festiveMeal3")!, 1)
 
         guard let meal1 = Meal(name: "Baked Camembert and Cranberry Snowflake (half)", photo: photo1!, calories: 447, rating: 4) else {
             fatalError("Unable to instantiate festiveMeal1")
@@ -184,11 +184,7 @@ class MealTableViewController: UITableViewController {
             fatalError("Unable to instantiate festiveMeal2")
         }
 
-        guard let meal3 = Meal(name: "Gingerbread House", photo: photo3!, calories: 511, rating: 3) else {
-            fatalError("Unable to instantiate festiveMeal3")
-        }
-
-        meals += [meal1, meal2, meal3]
+        meals += [meal1, meal2]
     }
     
     private func saveMeals() {

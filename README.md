@@ -165,14 +165,15 @@ curl -X POST \
   http://localhost:8080/meals \
   -H 'content-type: application/json' \
   -d '{
-	"name": "test",
-	"photo": "0e430e3a",
-	"rating": 1
+    "name": "test",
+    "photo": "0e430e3a",
+    "rating": 1,
+    "calories": 200
 }'
 ```
 If the POST endpoint is working correctly, this should return the same JSON that was passed in, eg:  
 ```
-{"name":"test","photo":"0e430e3a","rating":1}
+{"name":"test","photo":"0e430e3a","rating":1,"calories":200}
 ```
 
 5. Test the GET REST API is returning the stored data correctly  
@@ -184,7 +185,7 @@ curl -X GET \
 ```
 This should now return a single entry array containing the Meal that was stored by the POST request, eg:  
 ```
-[{"name":"test","photo":"0e430e3a","rating":1}]
+[{"name":"test","photo":"0e430e3a","rating":1,"calories":200}]
 ```
 
 ## Connect FoodTracker to the Kitura FoodServer
